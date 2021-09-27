@@ -57,3 +57,42 @@ a = "aabbccdd"
 p a.tr_s('a-c','A-C')   #=> "ABCdd"
 p a.squeeze('a-c')      #=> "abcdd"
 p a.replace('XYZ')      #=> "XYZ"
+
+
+# 文字の大小変換
+# capitalize      : 先頭のみ大文字。あとは小文字へ変換
+# capitalize!     : 上の破壊的メソッド
+# downcase        : 小文字へ変換
+# downcase!       : 上の破壊的メソッド
+# upcase          : 大文字へ変換
+# upcase!         : 上の破壊的メソッド
+# swapcase        : 大文字、小文字を逆にへ変換
+# swapcase!       : 上の破壊的メソッド
+
+
+# 文字列の改行や空白の削除
+# chomp     : 末尾の空白や改行を削除
+# chomp!    : 上の破壊的メソッド
+# strip     : 先頭と末尾の空白文字を削除
+# strip!    : 上の破壊的メソッド
+# lstrip    : 先頭の空白文字を削除
+# lstrip!   : 上の破壊的メソッド
+# rstrip    : 末尾の空白文字を削除
+# rstrip!   : 上の破壊的メソッド
+# chop      : 末尾の1文字を削除
+# chop!     : 上の破壊的メソッド
+
+
+# 文字列内の検索
+# include?  : 指定された文字列が含まれていればtrue
+# index     : 指定された文字列が最初にマッチした位置を返す
+# rindex    : 指定された文字列を後ろから検索し、最初にマッチした位置を返す
+# match     : 指定された正規表現にマッチしたMatchオブジェクトを返す
+# scan      : 指定された正規表現にマッチした部分文字列の配列を返す
+
+a = "abcdefg"
+p a.include?("abc") #=> true
+p a.index("bcd")    #=> 1
+p a.rindex("bcd")   #=> 1
+p a.match(/[b-d]/)  #=> #<MatchData "b">
+p a.scan(/[b-d]/)   #=> ["b", "c", "d"]
