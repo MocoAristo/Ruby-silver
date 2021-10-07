@@ -12,6 +12,15 @@ p a[:foo1] # => 1
 b = {foo1: 1, foo2: 2}
 p b[:foo2] # => 2
 
+#4 Hash[]で作成[key,value]で列挙する
+d = Hash[:foo1,1,:foo2,2]
+p d     #=> {:foo1=>1, :foo2=>2}
+
+#5 Hash.newで作成 ()内はデフォルト値を設定、ブロックは無視される
+e = Hash.new("初期値")
+p e[:apple]   #=> "初期値"
+
+
 #4 Hashの特殊な引数: 実引数の最後がhashの場合は、{}を省略できる
 def func(a,b,c)
   p c
